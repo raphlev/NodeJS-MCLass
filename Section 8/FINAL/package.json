@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-master-class",
+  "version": "1.0.0",
+  "description": "The-NodeJS-Master-Class-master-from-github node sandbox",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js localhost 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  }
+}
