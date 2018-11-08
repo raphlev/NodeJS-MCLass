@@ -13,3 +13,8 @@ RESULT: 200
 app.client.request(undefined,'api/users','GET',undefined,undefined,function(statusCode,payload){console.log(statusCode,payload);});
 
 RESULT: 400 {Error: "Missing required field"} --> it returns the error from the server's API method: here nmissing userId..
+
+During Client browser testing:
+Open Inspect page from given page request
+After clicking on any event button like Submit
+Check in Network tab for all object requests from client to server with response (status code)
