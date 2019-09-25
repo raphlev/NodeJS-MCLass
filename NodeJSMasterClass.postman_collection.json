@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "e35c6cc3-bfd9-5812-2812-90e6c1f7bf66",
+		"name": "NodeJSMasterClass",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "foo",
+						"value": "bar"
+					},
+					{
+						"key": "fizz",
+						"value": "buzz"
+					},
+					{
+						"key": "orange",
+						"value": "small"
+					},
+					{
+						"key": "apple",
+						"value": "big"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "foo",
+						"value": "bar"
+					},
+					{
+						"key": "fizz",
+						"value": "buzz"
+					},
+					{
+						"key": "orange",
+						"value": "small"
+					},
+					{
+						"key": "apple",
+						"value": "big"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "This is my body"
+				},
+				"url": {
+					"raw": "localhost:3000/sample?TOTO:TITI",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sample"
+					],
+					"query": [
+						{
+							"key": "TOTO:TITI",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET https test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "foo",
+						"value": "bar"
+					},
+					{
+						"key": "fizz",
+						"value": "buzz"
+					},
+					{
+						"key": "orange",
+						"value": "small"
+					},
+					{
+						"key": "apple",
+						"value": "big"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:3001/pingii",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"pingii"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create new User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\":\"Raphael\",\r\n\t\"lastName\":\"Leveque\",\r\n\t\"phone\":\"0614381086\",\r\n\t\"password\":\"thisIsAPassword\",\r\n\t\"tosAgreement\":true\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET existing User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "9uptfelp9bi7ogijivqb"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:3001/users?phone=0614381086",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0614381086"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update existing User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\":\"Raph\",\r\n\t\"phone\":\"0614381086\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE existing User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\":\"Raphael\",\r\n\t\"lastName\":\"Leveque\",\r\n\t\"phone\":\"0614381086\",\r\n\t\"password\":\"thisIsAPassword\",\r\n\t\"tosAgreement\":false\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/users?phone=0614381086",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "0614381086"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create new Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"phone\":\"0614381086\",\r\n\t\"password\":\"thisIsAPassword\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/tokens",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET existing Token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:3001/tokens?id=dih5mublopl5qm7izcia",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "dih5mublopl5qm7izcia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT extend existing Token",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\":\"dih5mublopl5qm7izcia\",\r\n\t\"extend\":true\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/tokens",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE existing Token",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\":\"Raphael\",\r\n\t\"lastName\":\"Leveque\",\r\n\t\"phone\":\"0614381086\",\r\n\t\"password\":\"thisIsAPassword\",\r\n\t\"tosAgreement\":false\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/tokens?id=dih5mublopl5qm7izcia",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "dih5mublopl5qm7izcia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create new Check using Token id in header",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "xw9m5cy7r2hm730haiq6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\t\"protocol\" : \"https\",\r\n\t\"url\" : \"google.com\",\r\n\t\"method\" : \"get\",\r\n\t\"successCodes\" : [200,201],\r\n\t\"timeoutSeconds\" : 3\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/checks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"checks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET existing Check using Token id in header",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "xw9m5cy7r2hm730haiq6"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:3001/checks?id=jclwj70q4pdxrnwvtdu3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"checks"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "jclwj70q4pdxrnwvtdu3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update existing Check using Token id in header",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "xw9m5cy7r2hm730haiq6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\" : \"jclwj70q4pdxrnwvtdu3\",\r\n\t\"protocol\" : \"https\",\r\n\t\"url\" : \"yahoo.com\",\r\n\t\"method\" : \"put\",\r\n\t\"successCodes\" : [200,201,403],\r\n\t\"timeoutSeconds\" : 2\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3001/checks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"checks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
